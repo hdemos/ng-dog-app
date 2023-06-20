@@ -1,0 +1,18 @@
+<div *ngFor="let recipe of recipes" >
+<div class="flex-container recipe-card flex-column">
+  <div class="recipe-image-container">
+    <img class="recipe-image" src="{{recipe.image}}">
+  </div>
+  <div class="recipe-details">
+  <h3>
+    <a [title]="recipe.name + ' details'"
+       [routerLink]="['/recipes', recipe.id]">
+      {{ recipe.name }}
+    </a>
+  </h3>
+  <p *ngIf="recipe.description">
+    Description: {{ recipe.description }}
+  </p>
+  </div>
+</div>
+</div>

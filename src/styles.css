@@ -1,1 +1,270 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic");
+
+:root {
+  --primary: #5a5ac4;;
+  --grey: #cdcdcd;
+  --border: #ededed;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: .5; /* Firefox */
+  font-size: 10px;
+}
+
+.app-header{
+  flex:2;
+  padding:20px 20px 0 20px;
+}
+
+.app-body{
+  flex:5;
+  height:100%;
+}
+
+.app-footer{
+  flex:1;
+  padding:10px 20px;
+}
+
+body {
+  background: #353353;
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow:column;
+}
+.text-small{
+  font-size:10px;
+}
+.text-medium{
+  font-size:12px;
+}
+.text-large{
+  font-size:16px;
+}
+.text-bold{
+  font-weight:500;
+}
+.text-grey{
+  color:grey;
+}
+
+h1{
+  font-size:20px;
+}
+
+h2{
+  font-size: 11px;
+  font-weight:500;
+}
+
+h3{
+  font-size: 12px;
+  font-weight:500;
+  margin:5px 0;
+}
+
+h4{
+  font-size:10px;
+  color:#C8C8C7;
+  font-weight:400;
+  margin:0;
+}
+
+h2 span{
+  color:#d0d0d0;
+  font-weight:400;
+}
+
+.margin-5{
+  margin:5px;
+}
+
+.app-container{
+  width: 300px;
+  height:500px;
+  background: white;
+  border-radius: 20px;
+  overflow:auto;
+}
+
+.flex-container{
+  display:flex;
+}
+.flex-center{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.flex-row{
+  display:flex;
+  flex-flow: row;
+  align-items:center;
+  position:relative;
+}
+.flex-apart{
+  justify-content:space-between;
+}
+.flex-column{
+  display:flex;
+  flex-flow:column;
+}
+
+.nav-item{
+  padding:20px 10px 0 10px;
+  cursor:pointer;
+}
+.nav-item:hover{
+  color: #FF4C60;
+  transition:.5s;
+}
+
+.nav-item.active{
+  color:#FF4C60;
+}
+
+.recipe-container{
+  overflow-x:auto;
+  height:100%;
+}
+.recipe-card{
+  flex:1;
+  min-width: 120px;
+  border: none;
+  background:#f6f6f6;
+  border-radius: 10px;
+  overflow:hidden;
+  height:200px;
+  margin: 0 5px 10px 5px;
+  cursor:pointer;
+  height:100%;
+}
+.recipe-card:hover{
+  background:#FF4C60;
+  transition: .5s;
+}
+.recipe-card:hover h3{
+  color:white;
+}
+.recipe-container .recipe-card:first-child{
+  margin-left:10px;
+}
+.recipe-image{
+  min-width: 194px;
+  margin-left: -3%;
+  margin-top: -25%;
+  width: 100%;
+}
+.recipe-card .recipe-image-container{
+  flex:7;
+  position:relative;
+}
+.recipe-card .recipe-image-container img{
+  position:absolute;
+}
+.recipe-card .recipe-details{
+  flex:3;
+  padding: 0 5px 0 10px;
+}
+
+.header-search{
+  padding: 10px 0;
+  position:relative;
+}
+.header-search i {
+  position:absolute;
+  left:8px;
+  margin-top:8px;
+  font-size:13px;
+  color: #ff4c6061;
+}
+
+.header-search input{
+  width:100%;
+  border-radius: 10px;
+  border: none;
+  background:#ededed;
+  padding: 7px 0;
+  box-sizing: border-box;
+  padding-left: 27px;
+}
+
+.recipe{
+  background:#FF4C60;
+  overflow:hidden;
+  position:relative;
+}
+.recipe img{
+  width:85%;
+}
+
+.recipe i{
+  color: #FF4C60;
+  font-size:12px;
+  margin:0 0 5px 0;
+}
+
+#recipe .recipe-details{
+  overflow:auto;
+  border-radius: 20px;
+  background:white;
+  padding:20px 30px;
+}
+
+#recipe h1{
+  margin:20px 0 0 0;
+}
+
+#recipe h2{
+  margin:0 0 20px 0;
+}
+
+#recipe h5{
+  margin: 3px 0;
+  font-size:10px;
+  font-weight:500;
+}
+
+.ingredients-counter{
+  padding: 5px 8px;
+  background:lightgrey;
+  border-radius: 10px;
+  font-weight:500;
+  margin-bottom: 15px;
+}
+
+#recipe .ingredients-image{
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  margin-right:10px;
+  border: solid 2px #FF4C60;;
+}
+
+#recipe li{
+  margin: 10px 0;
+}
+.ingridients-list li:first-child{
+  margin-top: 0 !important;
+}
+
+#recipe .fa-chevron-left{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color:white;
+  font-size: 17px;
+  cursor:pointer;
+}
+
+#recipe .fa-bookmark{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color:white;
+  font-size: 17px;
+}
